@@ -1,21 +1,23 @@
 <template>
-  <div class="page">
-      <h3 class="title">Sign In</h3>
+  <div 
+    class="page"
+    :style="{ backgroundImage: 'url(' + require('@/assets/image.jpg')+  ')' }"
+  >
+    <div class="container-form">
+      <h3 class="title">Sign In</h3><br/>
       <form clas="form-center" @submit.prevent="signin">
         <div class="text-red" v-if="error">{{ error }}</div>
 
-        <div class="form">
           <label for="email" class="label">E-mail</label>
           <input type="email" v-model="email" class="input" id="email" placeholder="any@gmail.com">
-        </div>
-        <div class="form-2">
+          <br/>
           <label for="password" class="label">Password</label>
           <input type="password" v-model="password" class="input" id="password" placeholder="Password">
-        </div>
         <button type="submit" class="button">Sign In</button>
 
         <div class="form-3"><router-link to="/signup" class="link">Sign up</router-link></div>
       </form>
+    </div>
   </div>
 </template>
 
@@ -62,84 +64,96 @@ export default {
       }
     }
   }
+  
 }
 </script>
 
 <style scoped>
 .page {
-    width: 100%;
-    height: 100%;
+  width: 100vw;
+  height: 100vh;
 
-    /* background:  */
-    color: #4361ee;
-    font-family: 'Poppins', sans-serif;
+  background: no-repeat right top fixed;
+  color: #4361ee;
+  font-family: 'Poppins', sans-serif;
 
-
-    display: flex;
-    flex-direction: column;
-
-    align-items: center;
-    justify-content: center;
-
-    padding: 190px;
-}
-
-.form {
-    padding: 20px;
+  display: flex;
+  flex-direction: column;
 }
 
 .title {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 600;
-    font-size: 25px;
-    padding: 20px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 28px;
+  margin: 20px;
 }
 
 .label {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400px;
-    color: #555b6e;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400px;
+  color: #555b6e;
+}
+
+.container-form {
+  background: #fff;
+  width: 450px;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  margin-top: 0px;
 }
 
 .input {
-    border-radius: 10px;
-    border-color: #4895ef;
-    border-width: 0.5px;
-    padding: 10px;
+  border-radius: 10px;
+  padding: 16px;
+  width: 100%;
+
+  border: 2px solid #4895ef;
+
+  display: flex;
+  align-items: center;
+
+  margin-top: 10px;
+
+  background: transparent;
+  
 }
 
 .input:hover{
-    background-color: #f5f3f4;
-    border-color: #3f37c9;
+  background-color: #f5f3f4;
+  border-color: #3f37c9;
 
 }
 
 .button {
-    position: relative;
-    left: 130px;
-    top: 20px;
+  position: relative;
+  left: 130px;
+  top: 20px;
 
-    border-radius: 10px;
-    border-color: #4361ee;
-    background-color: #4361ee;
-    border-width: 0.5px;
-    padding: 7px;
+  border-radius: 10px;
+  border-color: #4361ee;
+  background-color: #4361ee;
+  border-width: 0.5px;
+  padding: 8px;
 
-    color: #fff;
+  color: #fff;
 }
 
 .button:hover{
-    background-color:#3f37c9;
+  background-color:#3f37c9;
 }
 
 .link {
-    text-decoration: none;
-    text-decoration-color: none;
-
-    color: #4361ee;;
+  text-decoration: none;
+  transition: color 0.2s;
+  color: #4361ee;;
 }
 .link:hover {
-    color: #3f37c9;
+  color: #3f37c9;
 }
 
 
