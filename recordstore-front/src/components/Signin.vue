@@ -8,11 +8,13 @@
       <form clas="form-center" @submit.prevent="signin">
         <div class="text-red" v-if="error">{{ error }}</div>
 
+        <div class="form">
           <label for="email" class="label">E-mail</label>
           <input type="email" v-model="email" class="input" id="email" placeholder="any@gmail.com">
           <br/>
           <label for="password" class="label">Password</label>
           <input type="password" v-model="password" class="input" id="password" placeholder="Password">
+        </div>
         <button type="submit" class="button">Sign In</button>
 
         <div class="form-3"><router-link to="/signup" class="link">Sign up</router-link></div>
@@ -69,17 +71,41 @@ export default {
 </script>
 
 <style scoped>
-.page {
+
+.page{
   width: 100vw;
   height: 100vh;
 
-  background: no-repeat right top fixed;
-  color: #4361ee;
-  font-family: 'Poppins', sans-serif;
+  display: flex;
+  flex-direction: column;
 
+  background: #fff;
+  font-family: 'Poppins', sans-serif;
+  color:#5a189a
+
+}
+.container-form {
+ width: 100%;
+  height: 100%;
+
+  width: 450px;
+  height: 100vh;
+
+  background-color: #fff;
+  
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+}
+
+.form {
+  width: 300px;
   display: flex;
   flex-direction: column;
 }
+
 
 .title {
   font-family: 'Poppins', sans-serif;
@@ -94,25 +120,12 @@ export default {
   color: #555b6e;
 }
 
-.container-form {
-  background: #fff;
-  width: 450px;
-  height: 100vh;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-
-  margin-top: 0px;
-}
-
 .input {
   border-radius: 10px;
   padding: 16px;
   width: 100%;
 
-  border: 2px solid #4895ef;
+  border: 2px solid #9d4edd;
 
   display: flex;
   align-items: center;
@@ -120,40 +133,34 @@ export default {
   margin-top: 10px;
 
   background: transparent;
-  
 }
-
 .input:hover{
   background-color: #f5f3f4;
-  border-color: #3f37c9;
+  border-color: #7b2cbf;
 
 }
 
 .button {
-  position: relative;
-  left: 130px;
-  top: 20px;
+  margin: 20px;
 
   border-radius: 10px;
-  border-color: #4361ee;
-  background-color: #4361ee;
-  border-width: 0.5px;
-  padding: 8px;
+  border: none;
+  background-color: #5a189a;
+  padding: 10px;
 
   color: #fff;
 }
-
 .button:hover{
-  background-color:#3f37c9;
+  background-color:#7b2cbf;
 }
 
 .link {
   text-decoration: none;
   transition: color 0.2s;
-  color: #4361ee;;
+  color: #5a189a;
 }
 .link:hover {
-  color: #3f37c9;
+  color: #7b2cbf;
 }
 
 
