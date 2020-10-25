@@ -6,9 +6,9 @@
 
 body {
     color: #FFF;
-    background: #ebf2f5;
+    background: #e9ecef;
 }
 
 body, input, button, textarea {
-    font: 600 18px Nunito, sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
