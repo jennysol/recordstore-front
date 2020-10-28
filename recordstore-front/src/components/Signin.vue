@@ -13,7 +13,7 @@
           <input type="email" v-model="email" class="input" id="email" placeholder="any@gmail.com">
           <br/>
           <label for="password" class="label">Password</label>
-          <input type="password" v-model="password" class="input" id="password" placeholder="Password">
+          <input type="password" v-model="password" class="input" id="password" placeholder="Password"><br/>
         </div>
         <button type="submit" class="button">Sign In</button>
 
@@ -85,9 +85,6 @@ export default {
 
 }
 .container-form {
- width: 100%;
-  height: 100%;
-
   width: 450px;
   height: 100vh;
 
@@ -106,11 +103,11 @@ export default {
   flex-direction: column;
 }
 
-
 .title {
   font-family: 'Poppins', sans-serif;
   font-weight: 600;
   font-size: 28px;
+
   margin: 20px;
 }
 
@@ -137,24 +134,23 @@ export default {
 .input:hover{
   background-color: #f5f3f4;
   border-color: #7b2cbf;
-
 }
 
 .button {
-  margin: 20px;
-
   border-radius: 10px;
   border: none;
   background-color: #5a189a;
-  padding: 10px;
-
   color: #fff;
+
+  padding: 10px;
 }
 .button:hover{
   background-color:#7b2cbf;
 }
 
 .link {
+  position: relative;
+  top: 10px;
   text-decoration: none;
   transition: color 0.2s;
   color: #5a189a;
@@ -162,6 +158,13 @@ export default {
 .link:hover {
   color: #7b2cbf;
 }
+
+/* @media only screen and (max-width: 600px) {
+  .page{
+    background: #fff;
+    background-image: none;
+  }
+} */
 
 
 </style>

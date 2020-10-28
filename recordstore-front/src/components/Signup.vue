@@ -17,7 +17,7 @@
         <input type="password" v-model="password" class="input" id="password" placeholder="Password"><br/>
 
         <label for="password_confirmation" class="label">Password Confirmation</label>
-        <input type="password" v-model="password_confirmation" class="input" id="password_confirmation" placeholder="Password Confirmation">
+        <input type="password" v-model="password_confirmation" class="input" id="password_confirmation" placeholder="Password Confirmation"><br/>
       </div>
       <button type="submit" class="button-signup">Sign Up</button>
 
@@ -144,20 +144,21 @@ margin: 20px;
 }
 
 .button-signup {
-  margin: 20px;
-
   border-radius: 10px;
   border: none;
   background-color: #5a189a;
-  padding: 10px;
-
   color: #fff;
+
+  padding: 10px;
 }
 .button-signup:hover{
   background-color:#7b2cbf;
 }
 
 .link {
+  position: relative;
+  top: 10px;
+
   text-decoration: none;
   transition: color 0.2s;
   color: #5a189a;
